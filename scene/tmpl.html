@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>G-3 garage sequence</title>
+<style>
+html,body{height:100%;margin:0;font-family:'Segoe UI',Arial,sans-serif;color:#1d1d1b;background:#fff}
+#wrap{display:grid;grid-template-columns:1fr 330px;grid-template-rows:1fr auto;height:100%}
+#v{grid-row:1;grid-column:1;min-height:0;position:relative;background:#f4f3ef}
+#v canvas{display:block}
+#side{grid-row:1/3;grid-column:2;border-left:1px solid #c9c8c1;padding:16px;overflow:auto;box-sizing:border-box}
+h1{font-size:17px;margin:0 0 8px}
+.note{font-size:12px;color:#6f6e69;margin:0 0 12px;line-height:1.4}
+#steps button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #eeede8;padding:6px 4px;font:13px 'Segoe UI',Arial,sans-serif;color:#1d1d1b;cursor:pointer}
+#steps button:hover{background:#f4f3ef}
+#steps button.on{background:#1d1d1b;color:#fff}
+#bar{grid-row:2;grid-column:1;display:flex;gap:10px;align-items:center;padding:8px 12px;border-top:1px solid #c9c8c1}
+#bar button{font:13px 'Segoe UI',Arial,sans-serif;padding:5px 12px;background:#fff;border:1px solid #6f6e69;cursor:pointer}
+#bar button.on{background:#1d1d1b;color:#fff}
+#t{flex:1;accent-color:#b4472a}
+#lab{position:absolute;left:0;right:0;bottom:0;background:rgba(29,29,27,.78);color:#fff;font-size:17px;font-weight:600;padding:10px 16px}
+</style></head><body><div id="wrap">
+<div id="v"><div id="lab"></div></div>
+<div id="bar"><button id="play">Pause</button><input id="t" type="range" min="0" max="89" step="0.02" value="0"><button id="orbit">Orbit</button></div>
+<div id="side"><h1>G-3 garage sequence</h1>
+<p class="note">G-3 is a SpaceDIRT concept for a pressurized garage for SLED75-class rovers on a Moon Base node: a 4.2 m vessel with a curved plug door that moves in, lifts and slides up to the roof on tracks. The ramp tracks run out from channels under the deck. Geometry comes from the G-3 sizing record. SLED75, its front loader and its rototiller are drawn from SpaceDIRT CAD. Habitats and node follow NASA's Moon Base concept, with sizes scaled. Motion is not to time scale.</p>
+<div id="steps"></div></div></div>
+<script>__BUNDLE__</script></body></html>

@@ -1,0 +1,23 @@
+﻿{
+  "name": "claude-engineering-animation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "How SpaceDIRT and Claude build parametric engineering concept animations: sizing script to geometry JSON to three.js scene to headless frames to H.264.",
+  "scripts": {
+    "build:film": "node tools/build.mjs scene/film_entry.js tools/film.bundle.js",
+    "build:viewer": "node tools/build.mjs scene/viewer_entry.js tools/viewer.bundle.js && node tools/mkview.cjs scene/tmpl.html tools/viewer.bundle.js G3_viewer.html",
+    "build:encoder": "node tools/build.mjs tools/encode_entry.js tools/encode.bundle.js",
+    "frames": "node tools/frames.cjs frames 25 89",
+    "encode": "node tools/encode.cjs frames G3_sequence.mp4 2225",
+    "contact": "node tools/contact.cjs frames G3_sequence_frames.png 3 640 4,13,17,21,27,33,37.1,42,47,58,70,83"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "jpeg-js": "^0.4.4",
+    "mp4-muxer": "^5.2.2",
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^25.16.0",
+    "three": "^0.187.0",
+    "webm-muxer": "^5.1.4"
+  }
+}
