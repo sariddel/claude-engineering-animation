@@ -24,7 +24,7 @@ sizing script (node)  ->  geometry JSON  ->  three.js scene  ->  headless browse
 5. **Check.** `tools/contact.cjs` builds a contact sheet without a browser. Claude then reads the stills and the decoded film frames itself, checking for parts passing through each other, label clashes and captions that don't match the action. Nothing is called clean while an issue is open.
 6. **Viewer.** `scene/viewer_entry.js` plus `tools/mkview.cjs` make a single self-contained HTML file with play, scrub and orbit.
 
-Details and commands: [docs/pipeline.md](docs/pipeline.md). How the work was split between agents: [docs/agents.md](docs/agents.md). What went wrong and what we changed: [docs/lessons.md](docs/lessons.md).
+Details and commands: [docs/pipeline.md](docs/pipeline.md). How the work was split between agents: [docs/agents.md](docs/agents.md). What went wrong and what we changed: [docs/lessons.md](docs/lessons.md). The cleaned chat log of the session: [docs/chat.md](docs/chat.md).
 
 ## Run it
 
@@ -53,7 +53,7 @@ The film in `media/` was rendered with both.
 | `tools/` | build, frame render, encode, contact sheet, viewer packer |
 | `design/` | `G-3_geometry.json` and the G-3 sizing figures (side, end, plan, door motion, mass) |
 | `media/` | the film, its contact sheet and five stills |
-| `docs/` | pipeline, agents, prompts, lessons |
+| `docs/` | pipeline, agents, prompts, lessons, chat log |
 
 ## Status
 
